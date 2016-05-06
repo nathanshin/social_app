@@ -3,3 +3,16 @@ nathan:
   name: Nathan Shin
   email: nathanshin@example.org
   password_digest: <%= User.digest('password') %>
+  admin: true
+  
+sojung:
+  name: Sojung Uhm
+  email: suhm@utexas.edu
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
